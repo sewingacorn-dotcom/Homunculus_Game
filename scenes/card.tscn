@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bqcrkl151fntd"]
+
+[ext_resource type="Script" uid="uid://bqwl4vddqssrj" path="res://scripts/card.gd" id="1_kg30u"]
+[ext_resource type="Texture2D" uid="uid://dc5lptiehwg4q" path="res://sprites/cardBase.jpg" id="2_kg30u"]
+[ext_resource type="Texture2D" uid="uid://tmptsk5f73tv" path="res://sprites/hot garbage.png" id="3_kg30u"]
+[ext_resource type="FontFile" uid="uid://d4ccjwy8gm47u" path="res://sprites/3-by-5-pixel-font.otf/3-by-5-pixel-font.otf" id="4_sy11y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4gaj"]
+line_spacing = 33.795
+font = ExtResource("4_sy11y")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ra2i3"]
+font = ExtResource("4_sy11y")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kg30u"]
+font = ExtResource("4_sy11y")
+font_color = Color(0.99607843, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqbsm"]
+line_spacing = 1.0
+font = ExtResource("4_sy11y")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="Card" type="Node2D" unique_id=1861344143]
+script = ExtResource("1_kg30u")
+
+[node name="BaseCardSprite" type="Sprite2D" parent="." unique_id=239434452]
+texture = ExtResource("2_kg30u")
+
+[node name="CardImage" type="Node2D" parent="." unique_id=746624073]
+position = Vector2(0, -16)
+
+[node name="CardImageSprite" type="Sprite2D" parent="CardImage" unique_id=2100896785]
+texture = ExtResource("3_kg30u")
+
+[node name="cardName" type="Node2D" parent="." unique_id=380233289]
+position = Vector2(0, -16)
+
+[node name="NameLbl" type="Label" parent="cardName" unique_id=1203411730]
+custom_maximum_size = Vector2(50, -1)
+offset_left = -25.0
+offset_top = -21.0
+offset_right = 25.0
+offset_bottom = 22.0
+text = "fat
+cunt"
+label_settings = SubResource("LabelSettings_g4gaj")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CostDysplay" type="Node2D" parent="." unique_id=1292682545]
+position = Vector2(-21, 25)
+
+[node name="CostLbl" type="Label" parent="CostDysplay" unique_id=169779256]
+offset_top = 2.0
+offset_right = 8.0
+offset_bottom = 12.0
+text = "0"
+label_settings = SubResource("LabelSettings_ra2i3")
+horizontal_alignment = 1
+
+[node name="HealthDysplay2" type="Node2D" parent="." unique_id=13938495]
+position = Vector2(14, 25)
+
+[node name="HealthLbl" type="Label" parent="HealthDysplay2" unique_id=406494288]
+offset_top = 2.0
+offset_right = 8.0
+offset_bottom = 12.0
+text = "0"
+label_settings = SubResource("LabelSettings_kg30u")
+horizontal_alignment = 1
+
+[node name="cardDescription" type="Label" parent="." unique_id=1876333142]
+custom_maximum_size = Vector2(44.905, -1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.0
+offset_top = 8.0
+offset_right = 22.904999
+offset_bottom = 27.0
+grow_horizontal = 2
+text = "eats so much"
+label_settings = SubResource("LabelSettings_tqbsm")
+horizontal_alignment = 1
+autowrap_mode = 2
