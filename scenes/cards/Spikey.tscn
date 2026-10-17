@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b6o701pr1g2g1"]
+
+[ext_resource type="PackedScene" uid="uid://bqcrkl151fntd" path="res://scenes/card.tscn" id="1_jibd5"]
+[ext_resource type="Texture2D" uid="uid://bkpdkaxsoty3s" path="res://sprites/pointy frog son.png" id="2_16l7a"]
+
+[node name="Spikey" type="Node2D" unique_id=1874728228]
+
+[node name="Card" parent="." unique_id=1861344143 instance=ExtResource("1_jibd5")]
+card_name = "Spikey Homunculus"
+card_description = "Atk+1      "
+card_cost = 2
+card_health = 4
+
+[node name="cardImg" type="Node2D" parent="Card" unique_id=2113665474]
+
+[node name="Sprite2D" type="Sprite2D" parent="Card/cardImg" unique_id=368827425]
+position = Vector2(0, -16)
+texture = ExtResource("2_16l7a")
