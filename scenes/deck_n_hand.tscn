@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://dd86dw5jx3twf"]
 
 [ext_resource type="Script" uid="uid://cnc7e37k5iopy" path="res://scripts/deck_n_hand.gd" id="1_lb4i6"]
-[ext_resource type="Texture2D" uid="uid://dnvt02yu0jvkg" path="res://sprites/icon.svg" id="2_fmhf8"]
+[ext_resource type="PackedScene" uid="uid://bs7l85a11quu1" path="res://scenes/Hand.tscn" id="2_fmhf8"]
 
 [node name="DeckNHand" type="Node2D" unique_id=684002275]
 script = ExtResource("1_lb4i6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1736305882]
 
-[node name="spawn" type="Node2D" parent="CanvasLayer" unique_id=1494379744]
-position = Vector2(313, 182)
+[node name="Hand" parent="CanvasLayer" unique_id=1220342037 instance=ExtResource("2_fmhf8")]
+position = Vector2(320, 886)
+hand_radius = 600
+angle_limit = 25.0
 
 [node name="Button" type="Button" parent="." unique_id=343258610]
 offset_right = 8.0
@@ -21,11 +23,6 @@ offset_top = 35.0
 offset_right = 109.0
 offset_bottom = 66.0
 text = "create card 2"
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1967449320]
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1129453691]
-texture = ExtResource("2_fmhf8")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

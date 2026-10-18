@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bs7l85a11quu1"]
+
+[ext_resource type="Script" uid="uid://qigytl5461ig" path="res://scripts/hand.gd" id="1_vchyo"]
+[ext_resource type="PackedScene" uid="uid://b43s4pmuiw3xl" path="res://scenes/cards/DieselCard.tscn" id="2_co447"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ra2i3"]
+radius = 1000.0
+
+[node name="Hand" type="Node2D" unique_id=1220342037]
+script = ExtResource("1_vchyo")
+hand_radius = 1000
+
+[node name="Debugshape" type="CollisionShape2D" parent="." unique_id=1527070196]
+shape = SubResource("CircleShape2D_ra2i3")
+
+[node name="DieselCard" parent="." unique_id=379625573 instance=ExtResource("2_co447")]

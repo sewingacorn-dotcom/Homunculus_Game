@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b43s4pmuiw3xl"]
+
+[ext_resource type="PackedScene" uid="uid://bqcrkl151fntd" path="res://scenes/card.tscn" id="1_4eipb"]
+[ext_resource type="Script" uid="uid://b3dly5r3i7bdk" path="res://scripts/diesel_card.gd" id="1_ccmin"]
+[ext_resource type="Texture2D" uid="uid://dumhcml3jjuxd" path="res://sprites/diesel homunculus - Copy.png" id="3_75vtf"]
+
+[node name="DieselCard" type="Node2D" unique_id=379625573]
+script = ExtResource("1_ccmin")
+
+[node name="Card" parent="." unique_id=1861344143 node_paths=PackedStringArray("card_image") instance=ExtResource("1_4eipb")]
+card_name = "Diesel Homunculus"
+card_description = "Burn+1   Atk+1 to fire"
+card_image = NodePath("../cardImg/DieselHomunculus")
+card_cost = 3
+card_health = 4
+
+[node name="cardImg" type="Node2D" parent="." unique_id=1162931425]
+
+[node name="DieselHomunculus" type="Sprite2D" parent="cardImg" unique_id=1358902984]
+position = Vector2(0, -15)
+texture = ExtResource("3_75vtf")
+
+[connection signal="mouse_entered" from="Card" to="." method="_on_diesel_card_mouse_entered"]
+[connection signal="mouse_exited" from="Card" to="." method="_on_diesel_card_mouse_exited"]
