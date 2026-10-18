@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b6o701pr1g2g1"]
+
+[ext_resource type="Script" uid="uid://dgdyrunjekg40" path="res://scripts/spikey_card.gd" id="1_61bph"]
+[ext_resource type="PackedScene" uid="uid://bqcrkl151fntd" path="res://scenes/card.tscn" id="1_jibd5"]
+[ext_resource type="Texture2D" uid="uid://cgpa8rsqdjou" path="res://sprites/Spikey Homunculus.png" id="3_61bph"]
+
+[node name="SpikeyCard" type="Node2D" unique_id=1874728228]
+script = ExtResource("1_61bph")
+
+[node name="Card" parent="." unique_id=1861344143 node_paths=PackedStringArray("card_image") instance=ExtResource("1_jibd5")]
+card_name = "Spikey Homunculus"
+card_description = "Atk+1      Bleed+1"
+card_image = NodePath("../cardImg/Sprite2D")
+card_cost = 2
+card_health = 4
+
+[node name="cardImg" type="Node2D" parent="." unique_id=2113665474]
+
+[node name="Sprite2D" type="Sprite2D" parent="cardImg" unique_id=368827425]
+position = Vector2(1, -15)
+texture = ExtResource("3_61bph")
+
+[connection signal="mouse_entered" from="Card" to="." method="_on_card_mouse_entered"]
+[connection signal="mouse_exited" from="Card" to="." method="_on_card_mouse_exited"]
