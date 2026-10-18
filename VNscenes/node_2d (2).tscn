@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c4hvxkejjb86h"]
+
+[ext_resource type="Texture2D" uid="uid://1rfqmlom11rj" path="res://Assets/forkph.png" id="1_qxlk3"]
+
+[node name="Node2D" type="Node2D" unique_id=534872761]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=513411219]
+position = Vector2(2, -111)
+texture = ExtResource("1_qxlk3")

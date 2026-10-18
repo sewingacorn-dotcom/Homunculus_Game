@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cvnw2y7r3ttm1"]
+
+[ext_resource type="Texture2D" uid="uid://d3kl12feu7pcu" path="res://Assets/PrisonerinTheMInes.png" id="1_t0cwq"]
+[ext_resource type="Script" uid="uid://dk3skax0b521i" path="res://VNScripts/bg.gd" id="1_v8qvg"]
+[ext_resource type="PackedScene" uid="uid://b65ggh4epqtx" path="res://VNscenes/dialogue_ui.tscn" id="2_v8qvg"]
+[ext_resource type="PackedScene" uid="uid://ds7u2kwubsa46" path="res://VNscenes/node_2d.tscn" id="3_qr7il"]
+[ext_resource type="PackedScene" uid="uid://c4hvxkejjb86h" path="res://VNscenes/node_2d (2).tscn" id="4_x7i2x"]
+
+[node name="Main Scene" type="Node2D" unique_id=1892807806]
+script = ExtResource("1_v8qvg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=373132603]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=638179957]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = 3.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t0cwq")
+expand_mode = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1134287030]
+layer = 2
+
+[node name="dialogue_ui" parent="CanvasLayer2" unique_id=718425825 instance=ExtResource("2_v8qvg")]
+unique_name_in_owner = true
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1936345271]
+
+[node name="Control" type="Control" parent="." unique_id=330345231]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 273.0
+offset_right = 618.0
+offset_bottom = 361.0
+
+[node name="char1" parent="Control" unique_id=1380747912 instance=ExtResource("3_qr7il")]
+unique_name_in_owner = true
+position = Vector2(493, -103)
+
+[node name="char2" parent="Control" unique_id=534872761 instance=ExtResource("4_x7i2x")]
+unique_name_in_owner = true
+position = Vector2(197, 97)
+scale = Vector2(1.75, 1.75)
