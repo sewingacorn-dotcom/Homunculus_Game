@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c87kqccrohkej"
-path="res://.godot/imported/imghot garbage.png-3229cf1812d481bea639192b54edc50d.ctex"
+uid="uid://delwnb41jp6r2"
+path="res://.godot/imported/diesel homunculus.jpg-6925432838ad94f7b48ca91407b756dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/imghot garbage.png"
-dest_files=["res://.godot/imported/imghot garbage.png-3229cf1812d481bea639192b54edc50d.ctex"]
+source_file="res://sprites/diesel homunculus.jpg"
+dest_files=["res://.godot/imported/diesel homunculus.jpg-6925432838ad94f7b48ca91407b756dd.ctex"]
 
 [params]
 
