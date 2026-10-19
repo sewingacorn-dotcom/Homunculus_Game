@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b65ggh4epqtx"]
 
-[sub_resource type="Theme" id="Theme_e0sfr"]
-default_font_size = 41
+[ext_resource type="Script" uid="uid://b1xtjt1kk1abq" path="res://VNScripts/dialogue_ui.gd" id="1_hf6y0"]
+[ext_resource type="Theme" uid="uid://bkm3rv16521kb" path="res://Assets/Theme.tres" id="2_le84h"]
 
 [node name="dialogue ui" type="Control" unique_id=718425825]
 layout_mode = 3
@@ -14,9 +14,10 @@ offset_right = -1.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hf6y0")
 
 [node name="Dialogue Box" type="PanelContainer" parent="." unique_id=1517125834]
-self_modulate = Color(0.20960951, 0.00040872634, 0.5260998, 1)
+self_modulate = Color(0.47797883, 0.00016046793, 0.47797537, 1)
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -29,15 +30,16 @@ grow_horizontal = 2
 grow_vertical = 0
 offset_transform_enabled = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue Box" unique_id=402686606]
+[node name="DialogueLines" type="RichTextLabel" parent="Dialogue Box" unique_id=402686606]
+unique_name_in_owner = true
 layout_mode = 2
-theme = SubResource("Theme_e0sfr")
+theme = ExtResource("2_le84h")
 bbcode_enabled = true
-text = "[shake]Were you stalking me?!?!?[shake]"
+fit_content = true
 tab_size = 3
 
 [node name="speaker box" type="PanelContainer" parent="." unique_id=219916476]
-self_modulate = Color(0.9940994, 0, 2.8464527, 1)
+self_modulate = Color(1, 0.25490198, 1, 1)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -46,11 +48,10 @@ offset_right = 196.0
 offset_bottom = -97.0
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="speaker box" unique_id=1101038512]
+[node name="SpeakerName" type="Label" parent="speaker box" unique_id=1101038512]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Fork"
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Control" type="Control" parent="." unique_id=1696343876]
 layout_mode = 1
