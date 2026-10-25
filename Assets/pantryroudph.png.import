@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://78ejitmlwvxn"
-path="res://.godot/imported/point.png-dab2d4c071622b7c96a170d518838d7e.ctex"
+uid="uid://b1bi7frywkghq"
+path="res://.godot/imported/pantryroudph.png-bf89be9a870cb1a2156658f8762fab61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/point.png"
-dest_files=["res://.godot/imported/point.png-dab2d4c071622b7c96a170d518838d7e.ctex"]
+source_file="res://Assets/pantryroudph.png"
+dest_files=["res://.godot/imported/pantryroudph.png-bf89be9a870cb1a2156658f8762fab61.ctex"]
 
 [params]
 

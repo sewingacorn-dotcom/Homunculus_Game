@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b1xtjt1kk1abq" path="res://VNScripts/dialogue_ui.gd" id="1_hf6y0"]
 [ext_resource type="Theme" uid="uid://bkm3rv16521kb" path="res://Assets/Theme.tres" id="2_le84h"]
+[ext_resource type="Script" uid="uid://b5gt87anjqupj" path="res://VNScripts/text_blip_sound.gd" id="3_rxx8v"]
 
 [node name="dialogue ui" type="Control" unique_id=718425825]
 layout_mode = 3
@@ -65,3 +66,6 @@ scale = Vector2(0.4478254, 0.5078996)
 color = Color(0.37413925, 0.37413928, 0.37413922, 1)
 polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)
 uv = PackedVector2Array(47.999664, 51.333344, 75.999664, 28.666672, 47.999664, 10)
+
+[node name="TextBlipSound" type="AudioStreamPlayer" parent="." unique_id=1775545261]
+script = ExtResource("3_rxx8v")

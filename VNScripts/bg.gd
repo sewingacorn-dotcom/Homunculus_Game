@@ -15,9 +15,12 @@ func _ready():
 	
 func _input(event):
 	if event.is_action_pressed("next_line"):
-		if dialogue_index < len(dialoguelines) - 1:
-			dialogue_index += 1
-			process_current_line(parse_line(dialoguelines[dialogue_index]))
+		if dialogueui.animate_text:
+			dialogueui.skip_text_animation()
+		else:
+			if dialogue_index < len(dialoguelines) - 1:
+				dialogue_index += 1
+				process_current_line(parse_line(dialoguelines[dialogue_index]))
 
 func parse_line(line: String):
 	var line_info = line.split(":")
@@ -29,4 +32,5 @@ func parse_line(line: String):
 func process_current_line(line_info: Dictionary):
 	var _line = dialoguelines[dialogue_index]
 	dialogueui.speakername.text = line_info["speakername"]
+	dialogueui.change_line(line_info["speakername"],line_info["dialoguelines"])
 	dialogueui.dialoguelines.text = line_info["dialoguelines"]
