@@ -43,6 +43,7 @@ offset_bottom = 361.0
 [node name="char1" parent="Control" unique_id=1380747912 instance=ExtResource("3_qr7il")]
 unique_name_in_owner = true
 position = Vector2(493, -103)
+scale = Vector2(1.25, 1.25)
 
 [node name="char2" parent="Control" unique_id=534872761 instance=ExtResource("4_x7i2x")]
 unique_name_in_owner = true
